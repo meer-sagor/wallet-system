@@ -71,12 +71,12 @@ export const AddDrawer = ({ onCloseAddAccountDrawer }) => {
   return (
     <>
       <div className="fixed inset-0 bg-[#00000066]">
-        <div className="flex h-screen">
-          <div className="w-full h-screen"></div>
-          <div className="flex flex-col justify-between p-[3.4rem] bg-white w-[50%] h-screen">
+        <div className="flex h-full">
+          <div className="w-full"></div>
+          <div className="flex flex-col justify-between p-[3.4rem] bg-white w-[50%]">
             <div>
               <div className="flex justify-between">
-                <h1>Add an Account</h1>
+                <h1 className='text-[2.4rem] font-semibold'>Add an Account</h1>
                 <MdClose
                   size={32}
                   className="cursor-pointer"
@@ -126,20 +126,23 @@ export const AddDrawer = ({ onCloseAddAccountDrawer }) => {
               </div>
             </div>
 
-            <div className="self-end">
-              <div className="flex gap-4">
-                <button
-                  className="p-[1rem] border rounded-lg w-[15.6rem]"
-                  onClick={() => onCloseAddAccountDrawer()}
-                >
-                  Cancel
-                </button>
-                <button
-                  className="p-[1rem] bg-black text-white rounded-lg w-[15.6rem]"
-                  onClick={addAccountHandler}
-                >
-                  Add Account
-                </button>
+            <div>
+              <div className="border-t border-[#999] mb-[1rem] w-full"></div>
+              <div className="flex justify-end">
+                <div className="flex gap-4">
+                  <button
+                    className="p-[1rem] border rounded-lg w-[15.6rem]"
+                    onClick={() => onCloseAddAccountDrawer()}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    className="p-[1rem] bg-black text-white rounded-lg w-[15.6rem]"
+                    onClick={addAccountHandler}
+                  >
+                    Add Account
+                  </button>
+                </div>
               </div>
             </div>
           </div>
