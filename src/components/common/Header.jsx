@@ -16,13 +16,15 @@ export const Header = () => {
             priority={true}
           />
         </div>
-        <div className="w-[57.5rem]">
+        <div className="w-[57.5rem] hidden sm:block">
           <Input className={``} />
         </div>
-        <div className="flex gap-8 flex-grow">
-          <AiOutlineQuestionCircle size={20} />
-          <IoMdNotificationsOutline size={20} />
-          <div>user info</div>
+        <div className='hidden sm:block'>
+          <div className="flex gap-8 flex-grow">
+            <AiOutlineQuestionCircle size={20} />
+            <IoMdNotificationsOutline size={20} />
+            <div>user info</div>
+          </div>
         </div>
       </div>
     </header>

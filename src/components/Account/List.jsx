@@ -1,12 +1,24 @@
 import Image from 'next/image';
 import { AccountItem } from './Item';
 
-export const AccountList = ({list, onShowAddAccountDrawer }) => {
-  console.log({list});
+export const AccountList = ({
+  list,
+  onShowAddAccountDrawer,
+  onShowCashInOutDrawer,
+  onSelectCashInOutItem,
+}) => {
+  console.log({ list });
   return (
     <div className="flex gap-4 flex-wrap">
-      {list?.map(ac => <AccountItem key={ac.id} accountItem={ac} />)}
-  
+      {list?.map((ac) => (
+        <AccountItem
+          key={ac.id}
+          accountItem={ac}
+          onShowCashInOutDrawer={onShowCashInOutDrawer}
+          onSelectCashInOutItem={onSelectCashInOutItem}
+        />
+      ))}
+
       <div
         className={`bg-white rounded-2xl p-4 min-w-[32.8rem] cursor-pointer flex flex-col border border-black border-dashed justify-center items-center`}
         onClick={() => onShowAddAccountDrawer()}
@@ -23,4 +35,4 @@ export const AccountList = ({list, onShowAddAccountDrawer }) => {
       </div>
     </div>
   );
-}
+};
